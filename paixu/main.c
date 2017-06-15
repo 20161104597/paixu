@@ -9,6 +9,9 @@
 #include <stdio.h>
 int main()
 {
+    FILE *fp1,*fp2;
+    fp1=fopen("//Users//a20161104597//Desktop//paixu//in.txt","r");
+    fp2=fopen("//Users//a20161104597//Desktop//paixu//out.txt","w");
     int i,j;
     int a[10],t;
     printf("请输入10个数字\n");
@@ -31,7 +34,10 @@ int main()
     for(i=0;i<10;i++)
     {
         printf("%d ",a[i]);
+        fprintf(fp2,"%d ",a[i]);
     }
+    fclose(fp1);
+    fclose(fp2);
     return 0;
 }
 
